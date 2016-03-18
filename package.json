@@ -1,0 +1,50 @@
+{
+  "name": "feigner",
+  "version": "1.0.0",
+  "description": "Mocking framework focused on microservices/rest endpoints ",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "hapi": "^13.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-eslint": "^5.0.0",
+    "babel-register": "^6.3.13",
+    "code": "^2.1.0",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.3.4",
+    "mochawait": "^2.0.1",
+    "trash-cli": "^1.2.0"
+  },
+  "scripts": {
+    "preinstall": "npm run build",
+    "test": "_mocha test/**/*.tests.js",
+    "lint": "esw --quiet",
+    "build": "babel src -d build",
+    "build:watch": "npm run build -- -w",
+    "prepublish": "npm run clean && npm run build",
+    "coverage": "istanbul cover npm test",
+    "ci": "npm run lint && npm run coverage",
+    "clean": "trash ./build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://TylerGarlick@github.com/TylerGarlick/feigner.git"
+  },
+  "keywords": [
+    "http",
+    "mocking",
+    "mock",
+    "pretend",
+    "fake"
+  ],
+  "author": "Tyler Garlick <tjgarlick@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TylerGarlick/feigner/issues"
+  },
+  "homepage": "https://github.com/TylerGarlick/feigner#readme"
+}

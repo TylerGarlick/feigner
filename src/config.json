@@ -1,0 +1,12 @@
+{
+  "routes": {
+    "/v2/oauth/authorizations": {
+      "methods": [ "*" ],
+      "responses": {
+        "200": { }
+      },
+      "options": { },
+      "validations": { }
+    }
+  }
+}
